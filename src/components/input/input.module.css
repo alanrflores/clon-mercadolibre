@@ -1,0 +1,23 @@
+.divInput{
+  border: none;
+  font-weight:lighter;
+  
+}
+.inputs{
+  width: 500px;
+  padding: 4px;
+  box-shadow: 2px 1px 8px -4px rgba(0,0,0,0.76);
+}
+.divInput button{
+    background-color: #fff;
+    font-size: 10px;
+    font-weight:lighter;
+    line-height: 21px;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    z-index: 920;
+    border: none;
+    padding: 12px;
+    color: #666;
+   
+}

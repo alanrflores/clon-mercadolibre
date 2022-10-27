@@ -5,7 +5,6 @@ import { receiveProduct } from '../search/searchSlice';
 const initialState = {
     loading: false,
     categorys: [],
-    allCategorys: [],
     categoryId: {},
 }
 
@@ -24,16 +23,22 @@ const categorySlice = createSlice({
                 ...state,
                 loading: false,
                 categorys: action.payload,
-                allCategorys: action.payload,
+                
+            }
+
+        },
+        receivedCategoryId: (state, action) => {
+            return {
+                ...state,
+                loading: false,
                 categoryId: action.payload
             }
         },
-
         }
     }
 );
 
-export const { categoryProduct, receivedCategory } = categorySlice.actions;
+export const { categoryProduct, receivedCategory, receivedCategoryId } = categorySlice.actions;
 export default categorySlice.reducer;
 
 export const fetchingCategorys = () => {
@@ -53,7 +58,8 @@ export const fetchingCategoryId = (id) => {
         dispatch(categoryProduct());
         try {
             const res = await axios.get(`https://api.mercadolibre.com/categories/${id}`)
-            dispatch(receiveProduct(res.data));
+            console.log(res.data)
+            dispatch(receivedCategoryId(res.data));
         } catch (error) {
             console.log('Error', error)
         }

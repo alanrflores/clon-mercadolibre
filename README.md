@@ -16,7 +16,8 @@
 <ul>
 <h3>Este proyecto está construido utilizando las siguientes tecnologías: </h3>
 
-<li>React , vite, para la interfaz de usuario</span>
+<li>React, vite, para la interfaz de usuario</span>
+<li>Redux</span>
 <li>Node.js</span>
 <h1>Cómo instalar y ejecutar</h1>
 <p>Para ejecutar este proyecto en un ambiente de desarrollo, sigue los siguientes pasos:</p>
